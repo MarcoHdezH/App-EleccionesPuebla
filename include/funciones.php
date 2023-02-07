@@ -17,9 +17,8 @@ function mostrarCandidatos()
         echo "<div>";
 
         echo "<img src='./img/$imagen'>";
+        echo "<h5>$candidato</h5>";
         echo "<p>$nombre_partido ($siglas) </p>";
-        echo "<p>$candidato</p>";
-        echo "";
 
         echo "</div>";
     }
