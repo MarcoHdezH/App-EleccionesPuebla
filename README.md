@@ -6,4 +6,4 @@ https://gist.github.com/MarcoHdezH/ef55196ccbff3278cb23466fb93e2a95
 
 Si todo va bien deberia verse asi: 
 
-[!Imagen de Ejemplo](./docs/Imagen1.png)
+![Imagen de Ejemplo](docs/Imagen1.png)
