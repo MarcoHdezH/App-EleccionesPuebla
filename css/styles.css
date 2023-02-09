@@ -49,6 +49,11 @@ p{
     text-align: justify;
 }
 
+label{
+    font-size: 1.7rem;
+    text-align: center;
+}
+
 input{
     font-size: 2rem;
 }

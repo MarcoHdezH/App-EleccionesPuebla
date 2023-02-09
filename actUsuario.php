@@ -7,7 +7,7 @@
     <title>Actualizar Datos</title>
 </head>
 <body>
-    <h1>Actualizar Datos de Votante</h1>
+    <h1>Actualizar Datos de Votante // Dar de baja a Votante</h1>
     <hr>
     <h3>Recuerda tener tu clave a la mano</h3>
 
@@ -52,6 +52,14 @@
             <option>Yucatan</option>
             <option>Zacatecas</option>
         </select>
+        <br><br>
+        <input type="submit" name="enviar" value="Enviar">
+    </form>
+
+    <h3>Es necesario tener tu clave para darte de baja</h3>
+
+    <form action="./include/eliminarUsuario.php" method="post" enctype="multipart/form-data">
+        <label>Clave(CURP): <input type="text" name="curp" required></label>
         <br><br>
         <input type="submit" name="enviar" value="Enviar">
     </form>
