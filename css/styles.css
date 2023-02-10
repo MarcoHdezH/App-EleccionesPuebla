@@ -8,6 +8,11 @@
 html {
     box-sizing: border-box;
     font-size:62.5%;
+    background-color: #21232a;
+    color: var(--Blanco);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    margin: 5rem;
 }
 
 *, *:before, *:after {
@@ -50,7 +55,12 @@ p{
 }
 
 label{
-    font-size: 1.7rem;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+select{
+    font-size: 1.8rem;
     text-align: center;
 }
 
@@ -61,10 +71,15 @@ input{
 a{
     text-decoration: none;
     font-size: 2rem;
+    color: var(--Blanco);
 }
 
 img{
     max-width: 30%;
+}
+
+input{
+    text-align: center;
 }
 
 .Plantilla{
@@ -74,9 +89,14 @@ img{
 .candidatos{
     display: grid;
     grid-template-columns: repeat(6,1fr);
-    padding: 3rem;
+    column-gap: 2rem;
+    padding: 5rem;
 }
 
 .candidatos p{
+    text-align: center;
+}
+
+.Mensaje{
     text-align: center;
 }

@@ -12,7 +12,7 @@
     <link rel="preload" href="./css/styles.css" as="style">
     <link rel="stylesheet" href="./css/styles.css">
 
-    <title>Elecciones 2023</title>
+    <title>Elecciones 2024</title>
 </head>
 
 <body>
@@ -39,17 +39,21 @@
         
                         echo "<img src='./img/$imagen'>";
                         echo "<h5>$candidato</h5>";
-                        echo "<p>$nombre_partido ($siglas) </p>";
+                        echo "<p>$nombre_partido<br>($siglas) </p>";
                         echo "<input type='radio' name='partido' value='$id' required>";
         
                         echo "</div>";
                     }
                 ?>
             </div>
-            <label>Ingresa tu Clave: <input type="text" name="clave" required></label>
+            <label>Ingresa tu Clave</label>
+            <br><br>
+            <input type="text" name="clave" required>
             <br><br>
             <input type="submit" name="enviar" value="Emitir Voto">
         </form>
+        <br>
+        <a href="./include/consultarUsuario.php">¿Olvidaste tu Clave?</a>
     </section>
 </body>
 

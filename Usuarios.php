@@ -1,21 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preload" href="./css/normalize.css" as="style">
+    <link rel="stylesheet" href="./css/normalize.css">
+
+    <link rel="preload" href="./css/styles.css" as="style">
+    <link rel="stylesheet" href="./css/styles.css">
+
     <title>Alta Usuarios</title>
 </head>
-<body>
-    <h1>Formulario Dar De Alta en el Sistema</h1>
-    <hr>
 
-    <form action="./include/insertarUsuario.php" method="post" enctype="multipart/form-data">
-        <label>Nombre(s): <input type="text" name="nombre" required></label>
+<body>
+
+    <header>
+        <h1>Dar De Alta / Baja en el Sistema</h1>
+        <hr>
+    </header>
+
+    <div class="Mensaje">
+        <h4>No olvides guardar tu clave para futuras referencias</h4>
+    </div>
+
+    <form class="Mensaje" action="./include/insertarUsuario.php" method="post" enctype="multipart/form-data">
+        <label>Nombre(s):</label>
         <br><br>
-        <label>Clave(CURP): <input type="text" name="curp" required></label>
+        <input type="text" name="nombre" required>
         <br><br>
-        <label>Edad: <input type="number" name="edad" required></label>
+
+        <label>Clave(CURP):</label>
+        <br><br>
+        <input type="text" name="curp" required>
+        <br><br>
+
+        <label>Edad:</label>
+        <br><br>
+        <input type="number" name="edad" required>
+        <br><br>
+        <label>Selecciona tu Estado de Procedencia:</label>
         <br><br>
         <select name="estado">
             <option>AguasCalientes</option>
@@ -51,13 +77,26 @@
             <option>Yucatan</option>
             <option>Zacatecas</option>
         </select>
+        <br><br><br>
+        <input type="submit" name="agregar" value="Agregar">
+    </form>
+
+    <div class="Mensaje">
+        <h4>En caso de querer dar de baja. Solo proporciona tu Clave</h4>
+    </div>
+
+    <form class="Mensaje" action="./include/eliminarUsuario.php" method="post">
+        <label>Clave:</label>
         <br><br>
-        <input type="submit" name="enviar" value="Enviar">
+        <input type="text" name="clave" required>
+        <br><br>
+        <input type="submit" name="borrar" value="Borrar">
     </form>
 
     <?php
 
     ?>
-    
+
 </body>
+
 </html>
