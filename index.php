@@ -48,7 +48,7 @@
             </div>
             <label>Selecciona tu Nombre</label>
             <br><br>
-            <select name="nombre">
+            <select name="nombre" required>
                 <?php
                     require './include/Conexion.php';
                     $result = mysqli_query($db, "SELECT * FROM persona");
