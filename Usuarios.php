@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -30,11 +30,6 @@
         <label>Nombre(s):</label>
         <br><br>
         <input type="text" name="nombre" required>
-        <br><br>
-
-        <label>Clave(CURP):</label>
-        <br><br>
-        <input type="text" name="curp" required>
         <br><br>
 
         <label>Edad:</label>
@@ -82,20 +77,26 @@
     </form>
 
     <div class="Mensaje">
-        <h4>En caso de querer dar de baja. Solo proporciona tu Clave</h4>
+        <h4>En caso de querer darte de baja. Solo Selecciona tu nombre</h4>
+        <h6>Esto borrara tu(s) voto(s) igualmente</h6>
     </div>
 
     <form class="Mensaje" action="./include/eliminarUsuario.php" method="post">
-        <label>Clave:</label>
-        <br><br>
-        <input type="text" name="clave" required>
+        <select name="nombre">
+            <?php
+            require './include/Conexion.php';
+            $result = mysqli_query($db, "SELECT * FROM persona");
+            while ($row = mysqli_fetch_array($result)) {
+                $nombre = $row['nombre'];
+                echo "<option>$nombre</option>";
+            }
+            ?>
+        </select>
         <br><br>
         <input type="submit" name="borrar" value="Borrar">
+        <br><br>
+        <a href='../index.php'>Regresar a la venatana Anterior</a>
     </form>
-
-    <?php
-
-    ?>
 
 </body>
 

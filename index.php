@@ -46,14 +46,28 @@
                     }
                 ?>
             </div>
-            <label>Ingresa tu Clave</label>
+            <label>Selecciona tu Nombre</label>
             <br><br>
-            <input type="text" name="clave" required>
+            <select name="nombre">
+                <?php
+                    require './include/Conexion.php';
+                    $result = mysqli_query($db, "SELECT * FROM persona");
+                    while($row=mysqli_fetch_array($result)){
+                        $nombre=$row['nombre'];
+                        echo "<option>$nombre</option>";
+                    }
+                ?>
+
+            </select>
             <br><br>
             <input type="submit" name="enviar" value="Emitir Voto">
         </form>
         <br>
-        <a href="./include/consultarUsuario.php">¿Olvidaste tu Clave?</a>
+        <a href="Usuarios.php">¿No aparece tu nombre? Date de alta hoy mismo</a>
+        <br><br>
+        <a href="Consultas.php">Consultar Estadisticas de Votos</a>
+        <br><br>
+        <a href="Grafica.php">Mostrar Grafica</a>
     </section>
 </body>
 

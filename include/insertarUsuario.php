@@ -24,28 +24,17 @@
 
     <?php
     $nombre = $_REQUEST['nombre'];
-    $curp = $_REQUEST['curp'];
     $edad = $_REQUEST['edad'];
     $estado = $_REQUEST['estado'];
 
     require './Conexion.php';
 
-    $aux = mysqli_query($db, "SELECT * FROM persona WHERE curp='$curp'");
-
-    if ($aux->num_rows == 0) {
-        mysqli_query($link, "INSERT INTO persona (nombre,curp,edad,estado) VALUES ('$nombre','$curp',$edad,'$estado')");
-        echo "<div class='Mensaje'>";
-        echo "<h1>¡Felicidades! Tu voto quedo Registrado</h1>";
-        echo "<h4>Gracias por ejercer tu derecho a votar</h4>";
-        echo '<a href="../index.php">Regresar a la Ventana Anterior</a>';
-        echo "</div>";
-    } else {
-        echo "<div class='Mensaje'>
-                <h2>¡Fallo al Momento de Registrar Usuario!</h2>
-                <h4>Esa clave esta en uso. Por favor cambiala</h4>
-                <a href='../Usuarios.php'>Regresar a la Ventana Anterior</a>
-              </div>";
-    }
+    mysqli_query($db, "INSERT INTO persona (nombre,edad,estado) VALUES ('$nombre',$edad,'$estado')");
+    echo "<div class='Mensaje'>";
+    echo "<h1>¡Operacion Exitosa!</h1>";
+    echo "<h4>Estas dado de alta en el sistema</h4>";
+    echo '<a href="../index.php">Regresar a la Ventana Principal</a>';
+    echo "</div>";
     mysqli_close($db);
     ?>
 
