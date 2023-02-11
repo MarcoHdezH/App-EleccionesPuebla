@@ -57,7 +57,6 @@
                         echo "<option>$nombre</option>";
                     }
                 ?>
-
             </select>
             <br><br>
             <input type="submit" name="enviar" value="Emitir Voto">
