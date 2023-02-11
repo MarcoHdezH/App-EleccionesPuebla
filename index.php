@@ -65,7 +65,9 @@
         <br>
         <a href="Usuarios.php">¿No aparece tu nombre? Date de alta hoy mismo</a>
         <br><br>
-        <a href="Consultas.php">Consultar Estadisticas de Votos</a>
+        <a href="Consultas.php">Consultar informacion de Usuario</a>
+        <br><br>
+        <a href="Estadisticas.php">Consultar Estadisticas de Votos</a>
         <br><br>
         <a href="Grafica.php">Mostrar Grafica</a>
     </section>
